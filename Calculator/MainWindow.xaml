@@ -1,0 +1,161 @@
+﻿<Window x:Class="Calculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Calculator"
+        mc:Ignorable="d"
+        Title="Calculator" Height="750" Width="399" MinWidth="398" MaxWidth="400" 
+        WindowStartupLocation="CenterScreen" HorizontalAlignment="Stretch" 
+        VerticalAlignment="Stretch" Background="#FF4C4A48" WindowStyle="ThreeDBorderWindow">
+    <ScrollViewer ScrollViewer.VerticalScrollBarVisibility="Auto">
+    <Grid>
+        <StackPanel HorizontalAlignment="Stretch" Height="46" Margin="0,0,-0.2,0" VerticalAlignment="Top" Width="397">
+            <Image HorizontalAlignment="Left" Height="19" VerticalAlignment="Top" Width="18" Margin="17,19,0,19" 
+                   Visibility="Hidden" Source="menu_30px.png"/>
+        </StackPanel>
+        <Label Content="Standard" HorizontalAlignment="Left" Margin="14,4,0,0" VerticalAlignment="Top" Width="125" Height="42" 
+               FontWeight="Bold" Foreground="White" FontSize="25"/>
+        <Image HorizontalAlignment="Left" Height="25" Margin="182,14,0,0" VerticalAlignment="Top" Width="25" Visibility="Hidden" 
+               Source="Gruppe 2.png"/>
+        <Image HorizontalAlignment="Left" Height="29" Margin="335,10,0,0" VerticalAlignment="Top" Width="29" Source="time_machine_30px.png" 
+               ToolTip="Operations history" MouseDown="Image_MouseDown"/>
+        <TextBox x:Name="temp_result" BorderThickness="0" Height="19" Margin="0,51,-0.2,0" TextWrapping="Wrap" VerticalAlignment="Top" 
+                 Background="#FF4C4A48" HorizontalContentAlignment="Right" Padding="0,0,5,0" VerticalContentAlignment="Center" FontSize="14"  
+                 Foreground="White"/>
+        <TextBox x:Name="value" BorderThickness="0" Height="48" Margin="0,70,-0.2,0" TextWrapping="Wrap" VerticalAlignment="Top" Background="#FF4C4A48"  
+                 HorizontalContentAlignment="Right" Padding="0,0,5,0" VerticalContentAlignment="Center" FontSize="35" FontWeight="Bold" Foreground="White"/>
+        <TextBox BorderThickness="0" Height="19" Margin="0,150,0,0" TextWrapping="Wrap" Text="MC" VerticalAlignment="Top" Background="#FF4C4A48" 
+                 HorizontalContentAlignment="Center" Padding="0,0,5,0" VerticalContentAlignment="Center" FontSize="14"  Foreground="White" Width="67" 
+                 HorizontalAlignment="Left" Visibility="Hidden"/>
+        <TextBox BorderThickness="0" Height="19" Margin="63,150,0,0" TextWrapping="Wrap" Text="MR" VerticalAlignment="Top" Background="#FF4C4A48" 
+                 HorizontalContentAlignment="Center" Padding="0,0,5,0" VerticalContentAlignment="Center" FontSize="14"  Foreground="White" Width="68" 
+                 HorizontalAlignment="Left" Visibility="Hidden"/>
+        <TextBox BorderThickness="0" Height="19" Margin="131,150,0,0" TextWrapping="Wrap" Text="M+" VerticalAlignment="Top" Background="#FF4C4A48" 
+                 HorizontalContentAlignment="Center" Padding="0,0,5,0" VerticalContentAlignment="Center" FontSize="14"  Foreground="White" Width="68" 
+                 HorizontalAlignment="Left" Visibility="Hidden"/>
+        <TextBox BorderThickness="0" Height="19" Margin="199,150,0,0" TextWrapping="Wrap" Text="M-" VerticalAlignment="Top" Background="#FF4C4A48" 
+                 HorizontalContentAlignment="Center" Padding="0,0,5,0" VerticalContentAlignment="Center" FontSize="14"  Foreground="White" Width="68" 
+                 HorizontalAlignment="Left" Visibility="Hidden"/>
+        <TextBox BorderThickness="0" Height="19" Margin="264,150,0,0" TextWrapping="Wrap" Text="MS" VerticalAlignment="Top" Background="#FF4C4A48" 
+                 HorizontalContentAlignment="Center" Padding="0,0,5,0" VerticalContentAlignment="Center" FontSize="14"  Foreground="White" Width="68" 
+                 HorizontalAlignment="Left" Visibility="Hidden"/>
+        <TextBox BorderThickness="0" Height="19" Margin="329,150,-0.2,0" TextWrapping="Wrap" Text="Mⱽ" VerticalAlignment="Top" Background="#FF4C4A48" 
+                 HorizontalContentAlignment="Center" Padding="0,0,5,0" VerticalContentAlignment="Center" FontSize="14"  Foreground="White" Width="68" 
+                 HorizontalAlignment="Left" Visibility="Hidden"/>
+        <Button x:Name="button1" Content="Button" Background="#FF373737" BorderThickness="0" HorizontalAlignment="Left" Height="85" Margin="3,174,0,0" 
+                VerticalAlignment="Top" Width="95" />
+        <Button x:Name="button2" Content="Button" Background="#FF373737" BorderThickness="0" HorizontalAlignment="Left" Height="85" Margin="101,174,0,0" 
+                VerticalAlignment="Top" Width="95" />
+        <Button x:Name="button3" Content="Button" Background="#FF373737" BorderThickness="0" HorizontalAlignment="Left" Height="85" Margin="198,174,0,0" 
+                VerticalAlignment="Top" Width="95" />
+        <Button x:Name="button4" Content="Button" Background="#FF373737" BorderThickness="0" HorizontalAlignment="Left" Height="85" Margin="3,261,0,0" 
+                VerticalAlignment="Top" Width="95"  Foreground="White" FontSize="25" FontWeight="Bold"/>
+        <Button x:Name="button5" Content="Button" Background="#FF373737" BorderThickness="0" HorizontalAlignment="Left" Height="85" Margin="101,261,0,0" 
+                VerticalAlignment="Top" Width="95"  Foreground="White" FontSize="25" FontWeight="Bold"/>
+        <Button x:Name="button6" Content="Button" Background="#FF373737" BorderThickness="0" HorizontalAlignment="Left" Height="85" Margin="199,261,0,0" 
+                VerticalAlignment="Top" Width="95"  Foreground="White" FontSize="25" FontWeight="Bold"/>
+        <Button x:Name="button7" Content="Button" Background="#FF373737" BorderThickness="0" HorizontalAlignment="Left" Height="85" Margin="296,261,0,0" 
+                VerticalAlignment="Top" Width="95"  Foreground="White" FontSize="25" FontWeight="Bold"/>
+        <Button x:Name="button8" Content="Button" Background="#FF373737" BorderThickness="0" HorizontalAlignment="Left" Height="85" Margin="3,347,0,0" 
+                VerticalAlignment="Top" Width="95"  Foreground="White" FontSize="25" FontWeight="Bold"/>
+        <Button x:Name="button9" Content="Button" Background="#FF373737" BorderThickness="0" HorizontalAlignment="Left" Height="85" Margin="101,347,0,0" 
+                VerticalAlignment="Top" Width="95"  Foreground="White" FontSize="25" FontWeight="Bold"/>
+        <Button x:Name="button10" Content="Button" Background="#FF373737" BorderThickness="0" HorizontalAlignment="Left" Height="85" Margin="199,347,0,0" 
+                VerticalAlignment="Top" Width="95"  Foreground="White" FontSize="25" FontWeight="Bold"/>
+        <Button x:Name="button11" Content="Button" Background="#FF373737" BorderThickness="0" HorizontalAlignment="Left" Height="85" Margin="296,347,0,0" 
+                VerticalAlignment="Top" Width="95"  Foreground="White" FontSize="25" FontWeight="Bold"/>
+        <Button x:Name="button12" Content="%" Background="#FF373737" BorderThickness="0" HorizontalAlignment="Left" Height="85" Margin="3,174,0,0" 
+                VerticalAlignment="Top" Width="95"  FontSize="25" Foreground="White" Click="button12_Click"/>
+        <Button x:Name="button13" Content="CE" Background="#FF373737" BorderThickness="0" HorizontalAlignment="Left" Height="85" Margin="101,174,0,0" 
+                VerticalAlignment="Top" Width="95"  FontSize="25" Foreground="White" Click="button13_Click"/>
+        <Button x:Name="button14" Content="C" Background="#FF373737" BorderThickness="0" HorizontalAlignment="Left" Height="85" Margin="199,174,0,0" 
+                VerticalAlignment="Top" Width="95"  FontSize="25" Foreground="White" Click="button14_Click"/>
+        <Button x:Name="button15" BorderThickness="0" HorizontalAlignment="Left" Height="85" Margin="297,174,0,0" VerticalAlignment="Top" Width="95"  
+                FontSize="25" FontWeight="Bold" BorderBrush="{x:Null}" Foreground="{x:Null}" Background="#FF373737" Click="button15_Click">
+            <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <Image Source="clear_symbol_30px.png" Stretch="None" OpacityMask="Black" Height="51" Width="58"/>
+            </StackPanel>
+        </Button>
+        <Button x:Name="button16" Background="#FF373737" BorderThickness="0" HorizontalAlignment="Left" Height="85" Margin="3,261,0,0" 
+                VerticalAlignment="Top" Width="95"  Foreground="White" FontSize="25" FontWeight="Bold" Click="button16_Click">
+            <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <Image Source="1x.png" Stretch="UniformToFill" OpacityMask="Black" Height="39" Width="41"/>
+            </StackPanel>
+        </Button>
+        <Button x:Name="button17"  Background="#FF373737" BorderThickness="0" HorizontalAlignment="Left" Height="85" Margin="101,261,0,0" 
+                VerticalAlignment="Top" Width="95"  Foreground="White" FontSize="25" FontWeight="Bold" Click="button17_Click">
+            <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center" Height="29" Width="34">
+                <Image Source="x4.png" Stretch="None" OpacityMask="Black" Height="37" Margin="0,0,-14.4,0" VerticalAlignment="Center" 
+                       HorizontalAlignment="Center"/>
+            </StackPanel>
+        </Button>
+        <Button x:Name="button18" Background="#FF373737" BorderThickness="0" HorizontalAlignment="Left" Height="85" Margin="199,261,0,0" 
+                VerticalAlignment="Top" Width="95"  Foreground="White" FontSize="25" FontWeight="Bold" Click="button18_Click">
+            <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center" Height="29" Width="34">
+                <Image Source="square_root.png" Stretch="Fill" OpacityMask="Black" Height="27" Margin="0,0,9.6,0" VerticalAlignment="Center"/>
+            </StackPanel>
+        </Button>
+        <Button x:Name="button19" Content="÷" Background="#FF373737" BorderThickness="0" HorizontalAlignment="Left" Height="85" Margin="296,261,0,0" 
+                VerticalAlignment="Top" Width="95"  Foreground="White" FontSize="25" FontFamily="Segoe UI Light" Click="button19_Click"/>
+        <Button x:Name="button20" Content="7" Background="#FF373737" BorderThickness="0" HorizontalAlignment="Left" Height="85" Margin="3,347,0,0" 
+                VerticalAlignment="Top" Width="95"  Foreground="White" FontSize="25" FontWeight="Bold" Click="button20_Click"/>
+        <Button x:Name="button21" Content="8" Background="#FF373737" BorderThickness="0" HorizontalAlignment="Left" Height="85" Margin="101,347,0,0" 
+                VerticalAlignment="Top" Width="95"  Foreground="White" FontSize="25" FontWeight="Bold" Click="button21_Click"/>
+        <Button x:Name="button22" Content="9" Background="#FF373737" BorderThickness="0" HorizontalAlignment="Left" Height="85" Margin="199,347,0,0" 
+                VerticalAlignment="Top" Width="95"  Foreground="White" FontSize="25" FontWeight="Bold" Click="button22_Click"/>
+        <Button x:Name="button23" Content="x" Background="#FF373737" BorderThickness="0" HorizontalAlignment="Left" Height="85" Margin="296,347,0,0" 
+                VerticalAlignment="Top" Width="95"  Foreground="White" FontSize="25" FontFamily="Segoe UI Light" Click="button23_Click"/>
+        <Button x:Name="button24" Content="Button" Background="#FF373737" BorderThickness="0" HorizontalAlignment="Left" Height="85" Margin="3,434,0,0" 
+                VerticalAlignment="Top" Width="95"  Foreground="White" FontSize="25" FontWeight="Bold"/>
+        <Button x:Name="button25" Content="Button" Background="#FF373737" BorderThickness="0" HorizontalAlignment="Left" Height="85" Margin="101,434,0,0" 
+                VerticalAlignment="Top" Width="95"  Foreground="White" FontSize="25" FontWeight="Bold"/>
+        <Button x:Name="button26" Content="Button" Background="#FF373737" BorderThickness="0" HorizontalAlignment="Left" Height="85" Margin="198,434,0,0" 
+                VerticalAlignment="Top" Width="95"  Foreground="White" FontSize="25" FontWeight="Bold"/>
+        <Button x:Name="button27" Content="Button" Background="#FF373737" BorderThickness="0" HorizontalAlignment="Left" Height="85" Margin="296,434,0,0" 
+                VerticalAlignment="Top" Width="95"  Foreground="White" FontSize="25" FontWeight="Bold"/>
+        <Button x:Name="button28" Content="Button" Background="#FF373737" BorderThickness="0" HorizontalAlignment="Left" Height="85" Margin="3,521,0,0" 
+                VerticalAlignment="Top" Width="95"  Foreground="White" FontSize="25" FontWeight="Bold"/>
+        <Button x:Name="button29" Content="Button" Background="#FF373737" BorderThickness="0" HorizontalAlignment="Left" Height="85" Margin="101,521,0,0" 
+                VerticalAlignment="Top" Width="95"  Foreground="White" FontSize="25" FontWeight="Bold"/>
+        <Button x:Name="button30" Content="Button" Background="#FF373737" BorderThickness="0" HorizontalAlignment="Left" Height="85" Margin="199,521,0,0" 
+                VerticalAlignment="Top" Width="95"  Foreground="White" FontSize="25" FontWeight="Bold"/>
+        <Button x:Name="button31" Content="Button" Background="#FF373737" BorderThickness="0" HorizontalAlignment="Left" Height="85" Margin="296,521,0,0" 
+                VerticalAlignment="Top" Width="95"  Foreground="White" FontSize="25" FontWeight="Bold"/>
+        <Button x:Name="button32" Content="Button" Background="#FF373737" BorderThickness="0" HorizontalAlignment="Left" Height="85" Margin="3,607,0,0" 
+                VerticalAlignment="Top" Width="95"  Foreground="White" FontSize="25" FontWeight="Bold"/>
+        <Button x:Name="button33" Content="Button" Background="#FF373737" BorderThickness="0" HorizontalAlignment="Left" Height="85" Margin="101,607,0,0" 
+                VerticalAlignment="Top" Width="95"  Foreground="White" FontSize="25" FontWeight="Bold"/>
+        <Button x:Name="button34" Content="Button" Background="#FF373737" BorderThickness="0" HorizontalAlignment="Left" Height="85" Margin="199,607,0,0" 
+                VerticalAlignment="Top" Width="95"  Foreground="White" FontSize="25" FontWeight="Bold"/>
+        <Button x:Name="button35" Content="Button" Background="#FF373737" BorderThickness="0" HorizontalAlignment="Left" Height="85" Margin="296,607,0,0" 
+                VerticalAlignment="Top" Width="95"  Foreground="White" FontSize="25" FontWeight="Bold"/>
+        <Button x:Name="button36" Content="4" Background="#FF373737" BorderThickness="0" HorizontalAlignment="Left" Height="85" Margin="3,434,0,0" 
+                VerticalAlignment="Top" Width="95"  Foreground="White" FontSize="25" FontWeight="Bold" Click="button36_Click"/>
+        <Button x:Name="button37" Content="5" Background="#FF373737" BorderThickness="0" HorizontalAlignment="Left" Height="85" Margin="101,434,0,0" 
+                VerticalAlignment="Top" Width="95"  Foreground="White" FontSize="25" FontWeight="Bold" Click="button37_Click"/>
+        <Button x:Name="button38" Content="6" Background="#FF373737" BorderThickness="0" HorizontalAlignment="Left" Height="85" Margin="199,434,0,0" 
+                VerticalAlignment="Top" Width="95"  Foreground="White" FontSize="25" FontWeight="Bold" Click="button38_Click"/>
+        <Button x:Name="button39" Content="-" Background="#FF373737" BorderThickness="0" HorizontalAlignment="Left" Height="85" Margin="297,434,0,0" 
+                VerticalAlignment="Top" Width="95"  Foreground="White" FontSize="25" FontFamily="Segoe UI Light" Click="button39_Click"/>
+        <Button x:Name="button40" Content="1" Background="#FF373737" BorderThickness="0" HorizontalAlignment="Left" Height="85" Margin="3,521,0,0" 
+                VerticalAlignment="Top" Width="95"  Foreground="White" FontSize="25" FontWeight="Bold" Click="button40_Click"/>
+        <Button x:Name="button41" Content="2" Background="#FF373737" BorderThickness="0" HorizontalAlignment="Left" Height="85" Margin="101,521,0,0" 
+                VerticalAlignment="Top" Width="95"  Foreground="White" FontSize="25" FontWeight="Bold" Click="button41_Click"/>
+        <Button x:Name="button42" Content="3" Background="#FF373737" BorderThickness="0" HorizontalAlignment="Left" Height="85" Margin="199,521,0,0" 
+                VerticalAlignment="Top" Width="95"  Foreground="White" FontSize="25" FontWeight="Bold" Click="button42_Click"/>
+        <Button x:Name="button43" Content="+" Background="#FF373737" BorderThickness="0" HorizontalAlignment="Left" Height="85" Margin="296,521,0,0" 
+                VerticalAlignment="Top" Width="95"  Foreground="White" FontSize="25" FontFamily="Segoe UI Light" Click="button43_Click"/>
+        <Button x:Name="button44" Content="+/_" Background="#FF373737" BorderThickness="0" HorizontalAlignment="Left" Height="85" Margin="3,607,0,0" 
+                VerticalAlignment="Top" Width="95"  Foreground="White" FontSize="20" FontFamily="Segoe UI Light" Click="button44_Click"/>
+        <Button x:Name="button45" Content="0" Background="#FF373737" BorderThickness="0" HorizontalAlignment="Left" Height="85" Margin="101,607,0,0" 
+                VerticalAlignment="Top" Width="95"  Foreground="White" FontSize="25" FontWeight="Bold" Click="button45_Click"/>
+        <Button x:Name="button46" Content="," Background="#FF373737" BorderThickness="0" HorizontalAlignment="Left" Height="85" Margin="199,607,0,0" 
+                VerticalAlignment="Top" Width="95"  Foreground="White" FontSize="25" FontFamily="Segoe UI Light" Click="button46_Click"/>
+        <Button x:Name="button47" Content="=" Background="#FF5F5B5B" BorderThickness="0" HorizontalAlignment="Left" Height="85" Margin="296,607,0,0" 
+                VerticalAlignment="Top" Width="95"  Foreground="White" FontSize="25" FontFamily="Segoe UI Light" Click="button47_Click"/>
+        <Grid x:Name="grid_history" HorizontalAlignment="Left" Height="532" Margin="0,174,0,0" VerticalAlignment="Top" Width="399"/>
+    </Grid>
+    </ScrollViewer>
+</Window>
+    
